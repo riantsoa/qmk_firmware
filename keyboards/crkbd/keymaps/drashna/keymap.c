@@ -6,10 +6,15 @@ extern uint8_t is_master;
 // Following line allows macro to read current RGB settings
 extern rgblight_config_t rgblight_config;
 #endif
+#define D_PROGRAMM1L D_PROGRAMM1
 
-enum crkbd_keycodes { RGBRST = NEW_SAFE_RANGE };
+enum crkbd_keycodes { RGBRST = NEW_SAFE_RANGE,
+  R_PARATEN,
+  R_BRACKET,
+  R_BRACKET2,
+  R_PARATEN_R };
 
-/*
+/*  
  * The `LAYOUT_crkbd_base` macro is a template to allow the use of identical
  * modifiers for the default layouts (eg QWERTY, Colemak, Dvorak, etc), so
  * that there is no need to set them up for each layout, and modify all of
@@ -23,15 +28,15 @@ enum crkbd_keycodes { RGBRST = NEW_SAFE_RANGE };
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
   ) \
   LAYOUT_wrapper( \
-    KC_ESC,  K01,    K02,     K03,      K04,     K05,                        K06,     K07,     K08,     K09,     K0A,     KC_MINS, \
-    ALT_T(KC_TAB), K11,  K12, K13,      K14,     K15,                        K16,     K17,     K18,     K19,     K1A, RALT_T(KC_QUOT), \
-    OS_LSFT, CTL_T(K21), K22, K23,      K24,     K25,                        K26,     K27,     K28,     K29, RCTL_T(K2A), OS_RSFT, \
-                                        KC_GRV,  KC_SPC,  BK_LWER, DL_RAIS,  KC_ENT,  OS_RGUI                                      \
+    LT(_LOWER,KC_ESC),  K01,    K02,     K03,      K04,    K05,                        K06,     K07,     K08,     K09,     K0A,     KC_BSPC, \
+    KC_LSFT, LT(_RAISE,K11),  K12, K13,      LT(_PROGRAMM1,K14),     K15,                        K16,     K17,     K18,     K19,     K1A, KC_ENT, \
+    KC_LCTRL, CTL_T(K21), K22, K23,      K24,     K25,                        K26,     K27,     K28,     K29, RCTL_T(K2A), OS_RSFT, \
+                                KC_LALT ,MT(MOD_LGUI,KC_SPC), LT(_RAISE,KC_TAB),    MT(MOD_LSFT,KC_ENT),   LT(_LOWER,KC_SPC),   KC_TAB                                      \
   )
 #define LAYOUT_crkbd_base_wrapper(...)       LAYOUT_crkbd_base(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_QWERTY] = LAYOUT_crkbd_base_wrapper(
+  [_QWERTY] = LAYOUT_crkbd_base_wrapper(                             
     _________________QWERTY_L1_________________, _________________QWERTY_R1_________________,
     _________________QWERTY_L2_________________, _________________QWERTY_R2_________________,
     _________________QWERTY_L3_________________, _________________QWERTY_R3_________________
@@ -87,25 +92,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_LOWER] = LAYOUT_wrapper(
-    KC_F11,  _________________LOWER_L1__________________,                    _________________LOWER_R1__________________, KC_F11,
-    KC_F12,  _________________LOWER_L2__________________,                    _________________LOWER_R2__________________, KC_PIPE,
-    _______, _________________LOWER_L3__________________,                    _________________LOWER_R3__________________, _______,
+    _______,  _________________LOWER_L1__________________,                    _________________LOWER_R1__________________, _______,
+    _______,  _________________LOWER_L2__________________,                    _________________LOWER_R2__________________, KC_TILD,
+    _______, _________________LOWER_L3__________________,                    _________________LOWER_R3__________________, KC_PIPE,
                                      _______, _______, _______,        _______, _______, _______
   ),
 
   [_RAISE] = LAYOUT_wrapper( \
-    _______, _________________RAISE_L1__________________,                    _________________RAISE_R1__________________, _______,
-    _______, _________________RAISE_L2__________________,                    _________________RAISE_R2__________________, KC_BSLS,
-    _______, _________________RAISE_L3__________________,                    _________________RAISE_R3__________________, _______,
-                                     _______, _______, _______,        _______, _______, _______
+    KC_GRV, _________________RAISE_L1__________________,                    _________________RAISE_R1__________________, _______,
+    KC_F1, _________________RAISE_L2__________________,                    _________________RAISE_R2__________________, _______,
+    KC_F7, _________________RAISE_L3__________________,                    _________________RAISE_R3__________________, _______,
+                                     _______, _______, _______,        KC_GT, KC_RPRN, _______
   ),
 
   [_ADJUST] = LAYOUT_wrapper( \
-    KC_MAKE, _________________ADJUST_L1_________________,                    _________________ADJUST_R1_________________, KC_RESET,
+    _______, _________________ADJUST_L1_________________,                    _________________ADJUST_R1_________________, KC_RESET,
     VRSN,    _________________ADJUST_L2_________________,                    _________________ADJUST_R2_________________, EEP_RST,
     MG_NKRO, _________________ADJUST_L3_________________,                    _________________ADJUST_R3_________________, RGB_IDL,
-                                     HPT_TOG, KC_NUKE, _______,        _______, TG_MODS, HPT_FBK
+                                     HPT_TOG, KC_NUKE, KC_MAKE,        _______, TG_MODS, HPT_FBK
+  ),
+
+
+  [_PROGRAMM1] = LAYOUT_wrapper(
+      _______, __________________PROGRAMM1_L1_____________,                  __________________PROGRAMM1_R1_____________, _______,
+      _______, __________________PROGRAMM1_L2_____________,                  __________________PROGRAMM1_R2_____________, _______,
+      _______, __________________PROGRAMM1_L3_____________,                  __________________PROGRAMM1_R3_____________, _______,
+                                     _______, _______, _______,        _______, _______, _______
+  ),
+
+  [_PROGRAMM2] = LAYOUT_wrapper(
+      _______, __________________PROGRAMM2_L1_____________,                  __________________PROGRAMM2_R1_____________, _______,
+      _______, __________________PROGRAMM2_L2_____________,                  __________________PROGRAMM2_R2_____________, _______,
+      _______, __________________PROGRAMM2_L3_____________,                  __________________PROGRAMM2_R3_____________, _______,
+                                     _______, _______, _______,        _______, _______, _______
   )
+
 };
 // clang-format on
 
@@ -114,6 +135,18 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 #ifndef SPLIT_KEYBOARD
         if (keycode == RESET && !is_master) {
             return false;
+        }
+        if (keycode==R_PARATEN){
+            SEND_STRING(SS_TAP(X_5)SS_TAP(X_MINS)SS_TAP(X_LEFT));
+        }
+        if (keycode==R_BRACKET){
+            SEND_STRING(SS_LALT(SS_TAP(X_5))SS_LALT(SS_TAP(X_MINS))SS_TAP(X_LEFT)SS_TAP(X_ENTER));
+        }
+        if (keycode==R_BRACKET2){
+            SEND_STRING(SS_LSFT(SS_LALT(SS_TAP(X_5)))SS_LSFT(SS_LALT(SS_TAP(X_MINS)))SS_TAP(X_LEFT));
+        }
+        if (keycode==R_PARATEN_R){
+            SEND_STRING(SS_TAP(X_5));
         }
 #endif
     }

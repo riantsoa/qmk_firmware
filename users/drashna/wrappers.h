@@ -1,5 +1,6 @@
 #pragma once
 #include "drashna.h"
+#include "keymap_extras/keymap_french_osx.h"
 /*
 Since our quirky block definitions are basically a list of comma separated
 arguments, we need a wrapper in order for these definitions to be
@@ -154,22 +155,20 @@ NOTE: These are all the same length.  If you do a search/replace
 
 
 #define _________________LOWER_L1__________________        KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
-#define _________________LOWER_L2__________________        _________________FUNC_LEFT_________________
-#define _________________LOWER_L3__________________        _________________FUNC_RIGHT________________
+#define _________________LOWER_L2__________________        KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
+#define _________________LOWER_L3__________________        _______, _______, _______, _______, _______
 
-#define _________________LOWER_R1__________________        KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN
-#define _________________LOWER_R2__________________        _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR
-#define _________________LOWER_R3__________________        _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
-
-
+#define _________________LOWER_R1__________________        R_BRACKET,  R_PARATEN, KC_UP, KC_LPRN, KC_RPRN
+#define _________________LOWER_R2__________________        R_BRACKET2, KC_LEFT, KC_DOWN, KC_RGHT, KC_RPRN
+#define _________________LOWER_R3__________________        _______,    KC_PGUP, KC_PGDN, KC_LCBR, KC_RCBR
 
 #define _________________RAISE_L1__________________        ________________NUMBER_LEFT________________
-#define _________________RAISE_L2__________________        ___________________BLANK___________________
-#define _________________RAISE_L3__________________        ___________________BLANK___________________
+#define _________________RAISE_L2__________________        KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6
+#define _________________RAISE_L3__________________        KC_F8,   KC_F9,   KC_F10,  KC_F11, KC_F12
 
-#define _________________RAISE_R1__________________        ________________NUMBER_RIGHT_______________
-#define _________________RAISE_R2__________________        _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC
-#define _________________RAISE_R3__________________        _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
+#define _________________RAISE_R1__________________        KC_6,    KC_AMPR, KC_ASTR,  KC_LPRN, KC_MINS
+#define _________________RAISE_R2__________________        _______, KC_DLR, KC_PERC,   KC_CIRC, KC_PLUS
+#define _________________RAISE_R3__________________        KC_PLUS, KC_EXLM, KC_AT,    KC_HASH, KC_ENT
 
 
 
@@ -181,4 +180,20 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________ADJUST_R2_________________        CG_SWAP, QWERTY,  COLEMAK, DVORAK,  WORKMAN
 #define _________________ADJUST_R3_________________        MG_NKRO, KC_MUTE, KC_VOLD, KC_VOLU, KC_MNXT
 
+#define __________________PROGRAMM1_L1_____________       _______, _______, FR_PLUS, FR_HASH, FR_BSLS 
+#define __________________PROGRAMM1_L2_____________       _______, _______, FR_EQL,  FR_SLSH, FR_ASTR  
+#define __________________PROGRAMM1_L3_____________       _______, _______, FR_MINS, FR_COLN, FR_PIPE 
+
+#define __________________PROGRAMM1_R1_____________       FR_LABK, FR_DQUO, FR_PLUS, FR_COLN, FR_UNDS
+#define __________________PROGRAMM1_R2_____________       FR_HASH, FR_RPRN, FR_RCBR, FR_RBRC, FR_QUES
+#define __________________PROGRAMM1_R3_____________       FR_DLR,  FR_BSLS, FR_SCLN, FR_AMPR, FR_ASTR
+
+
+#define __________________PROGRAMM2_L1_____________       _______, _______, FR_PLUS, FR_HASH, FR_BSLS 
+#define __________________PROGRAMM2_L2_____________       _______, _______, FR_EQL,  FR_SLSH, FR_ASTR  
+#define __________________PROGRAMM2_L3_____________       _______, _______, FR_MINS, FR_COLN, FR_PIPE 
+
+#define __________________PROGRAMM2_R1_____________       FR_LABK, FR_DQUO, FR_PLUS, FR_COLN, FR_UNDS
+#define __________________PROGRAMM2_R2_____________       FR_HASH, FR_RPRN, FR_RCBR, FR_RBRC, FR_QUES
+#define __________________PROGRAMM2_R3_____________       FR_DLR,  FR_BSLS, FR_SCLN, FR_AMPR, FR_ASTR
 // clang-format on
