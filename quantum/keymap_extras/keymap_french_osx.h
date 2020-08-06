@@ -1,4 +1,4 @@
-/* Copyright 2016 Sébastien Pérochon
+    /* Copyright 2016 Sébastien Pérochon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -237,7 +237,7 @@
 #define FR_PERM S(A(FR_LUGR)) // ‰
 // Row 4
 #define FR_GTEQ S(A(FR_LABK)) // ≥
-#define FR_LSAQ S(A(FR_W))    // ›
+//#define FR_LSAQ S(A(FR_W))    // ›
 #define FR_FRSL S(A(FR_X))    // ⁄
 #define FR_CENT S(A(FR_C))    // ¢
 #define FR_SQRT S(A(FR_V))    // √
