@@ -182,11 +182,11 @@ NOTE: These are all the same length.  If you do a search/replace
 
 #define __________________PROGRAMM1_L1_____________       _______, _______, FR_PLUS, FR_HASH, FR_BSLS 
 #define __________________PROGRAMM1_L2_____________       _______, _______, FR_EQL,  FR_SLSH, FR_ASTR  
-#define __________________PROGRAMM1_L3_____________       _______, _______, FR_MINS, FR_COLN, FR_PIPE 
+#define __________________PROGRAMM1_L3_____________       _______, _______, FR_MINS, FR_COLN, FR_PIPE
 
-#define __________________PROGRAMM1_R1_____________       FR_LABK, FR_DQUO, FR_PLUS, FR_COLN, FR_UNDS
-#define __________________PROGRAMM1_R2_____________       FR_HASH, FR_RPRN, FR_RCBR, FR_RBRC, FR_QUES
-#define __________________PROGRAMM1_R3_____________       FR_DLR,  FR_BSLS, FR_SCLN, FR_AMPR, FR_ASTR
+#define __________________PROGRAMM1_R1_____________       FR_RABK, FR_QUOT, FR_EQL, FR_DOT,   FR_MINS
+#define __________________PROGRAMM1_R2_____________       FR_HASH, FR_LPRN, FR_LCBR,FR_LBRC,  FR_QUES
+#define __________________PROGRAMM1_R3_____________       FR_DLR,  FR_SLSH, FR_COMM, FR_PIPE, FR_ASTR
 
 
 #define __________________PROGRAMM2_L1_____________       _______, _______, FR_PLUS, FR_HASH, FR_BSLS 
@@ -194,6 +194,6 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __________________PROGRAMM2_L3_____________       _______, _______, FR_MINS, FR_COLN, FR_PIPE 
 
 #define __________________PROGRAMM2_R1_____________       FR_LABK, FR_DQUO, FR_PLUS, FR_COLN, FR_UNDS
-#define __________________PROGRAMM2_R2_____________       FR_HASH, FR_RPRN, FR_RCBR, FR_RBRC, FR_QUES
+#define __________________PROGRAMM2_R2_____________       FR_AT,   FR_RPRN, FR_RCBR, FR_RBRC, FR_QUES
 #define __________________PROGRAMM2_R3_____________       FR_DLR,  FR_BSLS, FR_SCLN, FR_AMPR, FR_ASTR
 // clang-format on

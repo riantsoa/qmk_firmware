@@ -28,8 +28,8 @@ enum crkbd_keycodes { RGBRST = NEW_SAFE_RANGE,
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
   ) \
   LAYOUT_wrapper( \
-    LT(_LOWER,KC_ESC),  K01,    K02,     K03,      K04,    K05,                        K06,     K07,     K08,     K09,     K0A,     KC_BSPC, \
-    KC_LSFT, LT(_RAISE,K11),  K12, K13,      LT(_PROGRAMM1,K14),     K15,                        K16,     K17,     K18,     K19,     K1A, KC_ENT, \
+    KC_ESC,  K01,    K02,     K03,      K04,    K05,                        K06,     K07,     K08,     K09,     K0A,     KC_BSPC, \
+    KC_LSFT, LT(_RAISE,K11),  K12, LT(_PROGRAMM1,K13),      LT(_PROGRAMM2,K14),     K15,                        K16,     K17,     K18,     K19,     K1A, KC_ENT, \
     KC_LCTRL, CTL_T(K21), K22, K23,      K24,     K25,                        K26,     K27,     K28,     K29, RCTL_T(K2A), OS_RSFT, \
                                 KC_LALT ,MT(MOD_LGUI,KC_SPC), LT(_RAISE,KC_TAB),    MT(MOD_LSFT,KC_ENT),   LT(_LOWER,KC_SPC),   KC_TAB                                      \
   )

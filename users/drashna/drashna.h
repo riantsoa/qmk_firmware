@@ -39,6 +39,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 enum userspace_layers {
     _QWERTY  = 0,
     _NUMLOCK = 0,
+    _LOWER,
+    _RAISE,
+    _ADJUST,
+    _PROGRAMM1,
+    _PROGRAMM2,
     _COLEMAK,
     _DVORAK,
     _WORKMAN,
@@ -50,12 +55,9 @@ enum userspace_layers {
     _GAMEPAD,
     _DIABLO,
     _MACROS,
-    _MEDIA,
-    _LOWER,
-    _RAISE,
-    _ADJUST,
-    _PROGRAMM1,
-    _PROGRAMM2
+    _MEDIA
+    
+    
 };
 
 bool          mod_key_press_timer(uint16_t code, uint16_t mod_code, bool pressed);

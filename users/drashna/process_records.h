@@ -68,7 +68,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 #define SP_LWER LT(_LOWER, KC_SPC)
 #define DL_RAIS LT(_RAISE, KC_DEL)
 #define ET_RAIS LT(_RAISE, KC_ENTER)
-#define D_PROGRAMM1 LT(_PROGRAMM1, K13)
+#define D_PROGRAMM1 LT(_PROGRAMM1, KC_DEL)
 
 /* OSM keycodes, to keep things clean and easy to change */
 #define KC_MLSF OSM(MOD_LSFT)
