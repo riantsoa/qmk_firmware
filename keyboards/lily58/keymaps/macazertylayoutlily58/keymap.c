@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,\
   KC_ESC,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     R_BRACKET,   R_PARATEN,   KC_UP,   KC_F10,  KC_F11,  KC_F12, \
   KC_LSFT, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   R_BRACKET2, KC_LEFT, KC_DOWN, KC_RGHT, KC_RPRN, KC_TILD, \
-  KC_LCTRL, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, KC_PGUP, KC_PGDN, KC_LCBR, KC_RCBR, KC_PIPE, \
+  KC_LCTRL, _______, _______, _______, _______, _______, _______, _______, FR_PERC, KC_PGUP, KC_PGDN, KC_LCBR, KC_RCBR, KC_PIPE, \
                              _______, _______, _______, _______, _______,  _______, _______, _______\
 ),
 /* RAISE
