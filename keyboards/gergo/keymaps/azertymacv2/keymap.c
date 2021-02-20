@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [4] = LAYOUT_gergo(
 			KC_TRNS, 					KC_TRNS, 		KC_TRNS, 		FR_PLUS, 		FR_HASH, 	FR_BSLS, 														FR_HASH, 	FR_QUOT, 	FR_EQL, 	FR_DOT, 	FR_MINS, 	KC_BSPC, 	
 			KC_TRNS, 					KC_TRNS,		KC_TRNS, 		FR_EQL, 		FR_SLSH, 	FR_ASTR, 	KC_TRNS, 							  KC_TRNS,      FR_LABK, 	FR_LPRN, 	FR_LCBR, 	FR_LBRC, 	FR_QUES, 	KC_ENT, 	
-			KC_TRNS, 					KC_TRNS, 		KC_TRNS, 		FR_MINS,    FR_COLN, 	FR_PIPE, 	KC_TRNS, 		KC_TRNS, 		KC_TRNS,  KC_TRNS, 		FR_DLR, 	FR_SLSH, 	FR_COMM, 	FR_PIPE, 	FR_ASTR, 	KC_RSFT, 	 		
+			KC_TRNS, 					KC_TRNS, 		KC_TRNS, 		FR_MINS,    FR_COLN, 	FR_PIPE, 	KC_TRNS, 		KC_TRNS, 		KC_TRNS,  KC_TRNS, 		FR_DLR, 	FR_SLSH, 	FR_COMM, 	FR_PIPE, 	FR_ASTR, 	FR_PERC, 	 		
 						KC_TRNS, 		KC_TRNS, 		KC_TRNS, 		KC_TRNS, 																					KC_TRNS, 		KC_TRNS, 		KC_RPRN, 	KC_GT),
 
 

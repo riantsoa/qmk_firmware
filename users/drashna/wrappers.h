@@ -194,6 +194,6 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __________________PROGRAMM2_L3_____________       _______, _______, FR_MINS, FR_COLN, FR_PIPE 
 
 #define __________________PROGRAMM2_R1_____________       FR_RABK, FR_DQUO, FR_PLUS, FR_COLN, FR_UNDS
-#define __________________PROGRAMM2_R2_____________       FR_AT,   FR_RPRN, FR_RCBR, FR_RBRC, FR_QUES
-#define __________________PROGRAMM2_R3_____________       FR_DLR,  FR_BSLS, FR_SCLN, FR_AMPR, FR_ASTR
+#define __________________PROGRAMM2_R2_____________       FR_AT,   FR_RPRN, FR_RCBR, FR_RBRC, FR_EXLM
+#define __________________PROGRAMM2_R3_____________       FR_PERC,  FR_BSLS, FR_SCLN, FR_AMPR, FR_ASTR
 // clang-format on
